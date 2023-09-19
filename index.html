@@ -1,0 +1,82 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF=8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>beatToday</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" type="image/png" href="css/icon/favicon-32x32.png" sizes="32x32" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+              // Add smooth scrolling to all links
+              $("a").on('click', function(event) {
+            
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+            
+                  // Store hash
+                  var hash = this.hash;
+            
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+               
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+            </script>
+    </head>
+    <body>
+        <video muted autoplay loop id="myVideo">
+            <source src="video/bg.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="boxOfmenu"></div>
+            <div class="overlay">
+                <nav>
+                    <ul>
+                        <li class="logo">beatToday</li>
+                        <li class="items"><a class="menu" href="index.html">Home</a></li>
+                        <li class="items"><a class="menu" href="#ct">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Welcome</h1>
+            <div class="bait">
+                <p>Rhythm</p><p>&</p><p>Sounds</p>
+            </div>
+            <div class="butBox"><a href="#sc"><div class="toSc"><p>GO!</p></div></a></div>
+        </div>
+        <div class="box" id="sc">
+            <div class="gridcon">
+                <a class="con1" href="drill.html"><div class="grid-item item-1"><h1 class="dri">DRILL</h1></div></a>
+                <a class="con2" href="lofi.html"><div class="grid-item item-2"><h1 class="lof">LOFI</h1></div></a>
+               
+                <a class="con4" href="trap.html"><div class="grid-item item-3"><h1 class="tra">TRAP</h1></div></a>
+                <a class="con5" href="retro.html"><div class="grid-item item-5"><h1 class="ret">RETRO</h1></div></a>
+            </div>
+        </div>
+       
+    </body>
+    <footer>
+        <div class="contact" id="ct">
+            <div class="drawC"></div>
+            <div class="contUs">Contact us</div>
+            <div class="cont">Thanawat Thongmor | <i class="fa fa-instagram" style="font-size:24px;color: red;"></i> : _jayy.tnw</div>
+            <div class="cont">Kitchanunt Nithinan | <i class="fa fa-instagram" style="font-size:24px;color: red;padding-top: 5px;"></i> : tonn_si</div>
+            <img src="css/icon/favicon-32x32.png" alt="" class="logo-ft">
+            <div class="contLogo">beatToday</div>
+        </div>
+    </footer>
+</html>

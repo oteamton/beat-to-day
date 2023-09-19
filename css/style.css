@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'pop';
+    src: url('fonts/Poppins-Thin.ttf');
+    font-style: normal;
+    font-weight: 99;
+}
+@font-face {
+    font-family: 'pop';
+    src: url('fonts/Poppins-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'pop';
+    src: url('fonts/Poppins-ExtraBold.ttf');
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: 'pop';
+    src: url(fonts/Poppins-Regular.ttf);
+    font-weight: 105;
+}
+#myVideo{
+   position: fixed;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.box{
+    position: relative;
+    display: flexbox;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.boxOfmenu{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    overflow: hidden;
+    position: top;
+    width: 100%;
+    height: 80px;
+    /*background-color: #d4d3d3;*/
+    opacity: 0.6;
+    z-index: 2;
+
+}
+.container{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.container:hover .overlay{
+    bottom: 0;
+    height: 100%;
+}
+.overlay{
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+    opacity: 1;
+    z-index: 2;  
+}
+nav{
+    padding: 0px 40px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li{
+    padding: 8px 0;
+    cursor: pointer;
+    
+}
+nav li .menu{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.menu{
+    transition: all 0.3s ease 0s;
+}
+.menu:hover{
+    color: rgb(75, 152, 253);
+}
+nav ul li.logo{
+    font-family: 'pop';
+    font-weight: 200;
+    flex: 1;
+    color: rgb(75, 152, 253);
+    font-size: 40px;
+    font-weight: 600px;
+    cursor: default;
+    user-select: none;
+    z-index: 2;
+}
+nav ul li .menu{
+    font-family: 'pop';
+    font-weight: 99;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    text-decoration: none;
+    transition: .4s;
+}
+nav ul li :hover .menu{
+    color: rgb(255, 251, 0); 
+}/*
+.testz{
+    font-family: 'pop';
+    font-weight: 100;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    z-index: 3;
+    position: relative;
+    color: aqua;
+}
+.chill{
+    font-family: 'pop';
+    font-weight: 105;
+    font-size: 42px;
+    position:relative;
+    text-align: center;
+    margin-top: 9px;
+    margin-left: 10px;
+    color: rgb(56, 55, 55);
+    letter-spacing: 12px; 
+}*/
+.gridcon{
+    position: relative;
+    top: 50;
+    display: grid;
+    gap: 4vw;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: auto auto auto auto;
+  /*  background-color:rgba(119, 47, 47, 0.5);*/
+}
+.grid-item{
+    height: 90vh;
+    width: 30vh;
+    object-fit: cover;
+    object-position: center; 
+    background-color: #6b6b6b;
+    cursor: pointer;
+    border-radius: 8vw;
+    opacity: 0.6;
+    transition: .6s ease;
+}
+.grid-item:hover{
+    opacity: 1.5;
+    transform: scale(1.2);
+}
+
+.item-1{
+    background-image: url(BG_Drill.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item-2{
+    background-image: url(imgs/Lofi/BG.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item-3{
+    background-image: url(imgs/maxresdefault.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item-4{
+    background-image: url(imgs/beatart.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item-5{
+    background-image: url(imgs/Retro/Capture.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.con1{
+    text-decoration: none;
+}
+.con2{
+    text-decoration: none;
+}
+.con3{
+    text-decoration: none;
+}
+.con4{
+    text-decoration: none;
+}
+.con5{
+    text-decoration: none;
+}
+.dri{
+    font-family: 'pop';
+    font-weight: 105;
+    font-size: 4vw;
+    color: #fed128;
+    writing-mode: vertical-rl;
+    letter-spacing: 20;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+.lof{
+    font-family: 'pop';
+    font-weight: 105;
+    font-size: 4vw;
+    color: white;
+    writing-mode: vertical-rl;
+    letter-spacing: 20;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.tra{
+    font-family: 'pop';
+    font-weight: 105;
+    font-size: 4vw;
+   /* text-shadow: -2px 0 rgb(221, 98, 205), 0 2px rgb(221, 98, 205), 2px 0 rgb(221, 98, 205), 0 -2px rgb(221, 98, 205);*/
+    color: rgb(130, 48, 177);
+    writing-mode: vertical-rl;
+    letter-spacing: 20;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.bea{
+    font-family: 'pop';
+    font-weight: 105;
+    font-size: 4vw;
+   /* text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;*/
+    color: rgb(75, 152, 253);
+    writing-mode: vertical-rl;
+    letter-spacing: 20;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ret{
+    font-family: 'pop';
+    font-weight: 105;
+    font-size: 4vw;
+    color: black;
+    writing-mode: vertical-rl;
+    letter-spacing: 20;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content{
+    position: sticky;
+    text-align: center;
+    top: 24vh;
+    z-index: 1;
+}
+.content h1{
+    display: inline;
+    cursor: default;
+    text-transform: uppercase;
+    font-family: 'pop';
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    font-weight: 200;
+    font-size: 10vw;
+    letter-spacing: -1.3vw;
+}
+.butBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+   /* background-color: aqua;*/
+    z-index: 3;
+}
+.butBox a{
+    text-decoration: none;
+}
+.toSc{  
+    height: 10vh;
+    width: 20vw;
+    border: none;
+    color: #000;
+    border-radius: 5px;
+    transition: ease-out .3s;
+    outline: none;
+   /* border: 3px solid #000000;*/
+    background-color: rgba(255, 255, 255, 0.61);
+    position: relative;
+    z-index: 1;
+}
+.toSc:hover{
+    color: #fff;
+}
+.toSc:before{
+    transition: .5s all ease;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    opacity: 0;
+    content: "";
+    border-radius: 4px;
+    background-color: #000;
+}
+.toSc:hover:before{
+    transition: .5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+.toSc p{
+    font-family: 'pop';
+    font-weight: 99;
+    font-size: 2vw;
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);   
+}
+.bait{
+    position: relative;
+    list-style: none;
+    left: 50%;
+    top: -15;
+    transform: translate(-50%);
+    z-index: 1;
+}
+.bait p{
+    display: inline;
+    font-family: 'pop';
+    font-weight: 100;
+    font-size: 3vw;
+    padding: 2vw;
+    line-height: 1.2;
+    color:white;
+}
+.contact{
+    position: absolute;
+    top: 260%;
+    text-align: start;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+.drawC{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 2px;
+    height: 75% ;
+    background-color: #ffffff;
+}
+.cont{
+    position:relative;
+    font-family: 'pop';
+    font-weight: 100;
+    color: white;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.contUs{
+    font-family: 'pop';
+    font-weight: 200;
+    font-size: 1.5rem;
+    color: rgb(75, 152, 253);
+    padding-left: 20px;
+}
+.contLogo{
+    position: absolute;
+    font-family: 'pop';
+    font-weight: 200;
+    flex: 1;
+    color: rgb(75, 152, 253);
+    font-size: 40px;
+    font-weight: 600px;
+    cursor: default;
+    user-select: none;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+}
+.logo-ft{
+    position: absolute;
+    top: 50%;
+    left: 66%;
+    transform: translate(-50%,-50%);
+}
+
+
